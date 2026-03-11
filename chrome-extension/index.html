@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RAV Trader</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- WELCOME PAGE -->
+  <div id="welcomePage" class="page active">
+    <div class="welcome-hero">
+      <div class="logo-container">
+        <div class="logo logo-large">
+          <span class="logo-box">RAV</span>
+          <span class="logo-text">Trader</span>
+        </div>
+      </div>
+
+      <div class="hero-content">
+        <h1 class="hero-title">AI-Powered Trading Signals</h1>
+        <p class="hero-subtitle">Automated trading signals from Darkex with real-time analysis</p>
+
+        <div class="hero-features">
+          <div class="feature-item">
+            <div class="feature-icon">📊</div>
+            <span>Live Market Data</span>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">🤖</div>
+            <span>AI Signals</span>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">⚡</div>
+            <span>Auto Trading</span>
+          </div>
+        </div>
+
+        <button class="btn btn-primary btn-large" id="getStartedBtn">
+          <span>Get Started</span>
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" style="margin-left: 8px;">
+            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+
+        <button class="btn btn-text" id="showLoginBtn">Already have an account? <strong>Login</strong></button>
+      </div>
+
+      <div class="info-note">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M8 14.5C4.41 14.5 1.5 11.59 1.5 8C1.5 4.41 4.41 1.5 8 1.5C11.59 1.5 14.5 4.41 14.5 8C14.5 11.59 11.59 14.5 8 14.5Z" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M8 5.5V8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <circle cx="8" cy="10.5" r="0.5" fill="currentColor"/>
+        </svg>
+        <span>Create an account to start trading with AI-powered signals</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- LOGIN PAGE -->
+  <div id="loginPage" class="page">
+    <div class="logo-container">
+      <div class="logo">
+        <span class="logo-box">RAV</span>
+        <span class="logo-text">Trader</span>
+      </div>
+    </div>
+
+    <div class="content">
+      <h1 class="page-title">Welcome Back</h1>
+      <p class="page-subtitle">Sign in to continue trading</p>
+
+      <form id="loginForm" class="form">
+        <div class="form-group">
+          <label for="loginEmailOrUsername">Email or Username</label>
+          <input type="text" id="loginEmailOrUsername" placeholder="Enter your email or username" required>
+        </div>
+
+        <div class="form-group">
+          <label for="loginPassword">Password</label>
+          <input type="password" id="loginPassword" placeholder="Enter your password" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Login</button>
+        <button type="button" class="btn btn-secondary" id="backToWelcomeBtn">Back</button>
+      </form>
+
+      <div class="info-note">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M8 14.5C4.41 14.5 1.5 11.59 1.5 8C1.5 4.41 4.41 1.5 8 1.5C11.59 1.5 14.5 4.41 14.5 8C14.5 11.59 11.59 14.5 8 14.5Z" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M8 5.5V8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <circle cx="8" cy="10.5" r="0.5" fill="currentColor"/>
+        </svg>
+        <span>Use your RAV Trader account credentials to login</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- REGISTER PAGE -->
+  <div id="registerPage" class="page">
+    <div class="logo-container">
+      <div class="logo">
+        <span class="logo-box">RAV</span>
+        <span class="logo-text">Trader</span>
+      </div>
+    </div>
+
+    <div class="content">
+      <h1 class="page-title">Create Account</h1>
+      <p class="page-subtitle">Join RAV Trader today</p>
+
+      <div class="darkex-notice">
+        <div class="darkex-notice-header">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18Z" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M10 6V10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <circle cx="10" cy="13.5" r="0.75" fill="currentColor"/>
+          </svg>
+          <span>Darkex Account Required</span>
+        </div>
+        <p class="darkex-notice-text">You must create a Darkex account first and enter the <strong>BONUS100</strong> referral code during registration. <strong style="color: #ff5050;">You can only register while on the Darkex registration page.</strong></p>
+        <button type="button" class="btn btn-darkex" id="openDarkexBtn">
+          <span>Open Darkex Registration</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="margin-left: 6px;">
+            <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+
+      <form id="registerForm" class="form">
+        <div class="form-group">
+          <label for="regUsername">Username</label>
+          <input type="text" id="regUsername" placeholder="Choose a username" required>
+        </div>
+
+        <div class="form-group">
+          <label for="regUid">DarkexUID</label>
+          <input type="text" id="regUid" placeholder="Your Darkex UID" required>
+          <span class="field-hint">Find your UID in Darkex account settings after registration</span>
+        </div>
+
+        <div class="form-group">
+          <label for="regEmail">E-mail</label>
+          <input type="email" id="regEmail" placeholder="your@email.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="regPassword">Password</label>
+          <input type="password" id="regPassword" placeholder="Create a password" required>
+        </div>
+
+        <div class="form-group">
+          <label for="regConfirmPassword">Repeat password</label>
+          <input type="password" id="regConfirmPassword" placeholder="Confirm your password" required>
+        </div>
+
+        <div class="form-group" style="margin-top: 24px;">
+          <label class="checkbox-container">
+            <input type="checkbox" id="termsCheckbox" required>
+            <span class="checkmark"></span>
+            <span class="checkbox-label">
+              I have read and accept the <a href="#" id="showTermsLink" class="terms-link">Terms and Conditions</a>.
+            </span>
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Create Account</button>
+        <button type="button" class="btn btn-secondary" id="backToLoginBtn">Back to Login</button>
+      </form>
+
+      <div class="info-note">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M8 14.5C4.41 14.5 1.5 11.59 1.5 8C1.5 4.41 4.41 1.5 8 1.5C11.59 1.5 14.5 4.41 14.5 8C14.5 11.59 11.59 14.5 8 14.5Z" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M8 5.5V8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <circle cx="8" cy="10.5" r="0.5" fill="currentColor"/>
+        </svg>
+        <span>Your info will be securely connected to RAV Trader</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- API SETUP PAGE -->
+  <div id="apiSetupPage" class="page">
+    <div class="logo-container">
+      <div class="logo">
+        <span class="logo-box">RAV</span>
+        <span class="logo-text">Trader</span>
+      </div>
+    </div>
+
+    <div class="content">
+      <h1 class="page-title">Connect Your Darkex API</h1>
+      <p class="page-subtitle">Link your trading account securely</p>
+
+      <form id="apiSetupForm" class="form">
+        <div class="form-group">
+          <label for="apiKey">API Key</label>
+          <input type="text" id="apiKey" placeholder="Enter your API key" required>
+        </div>
+
+        <div class="form-group">
+          <label for="secretKey">Secret Key</label>
+          <input type="password" id="secretKey" placeholder="Enter your secret key" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Save & Continue</button>
+      </form>
+
+      <div class="info-note">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M8 14.5C4.41 14.5 1.5 11.59 1.5 8C1.5 4.41 4.41 1.5 8 1.5C11.59 1.5 14.5 4.41 14.5 8C14.5 11.59 11.59 14.5 8 14.5Z" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M8 5.5V8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <circle cx="8" cy="10.5" r="0.5" fill="currentColor"/>
+        </svg>
+        <span>Your API credentials are stored locally and never shared</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- DASHBOARD PAGE -->
+  <div id="dashboardPage" class="page">
+    <div class="dashboard-header">
+      <div class="logo">
+        <span class="logo-box">RAV</span>
+        <span class="logo-text">Trader</span>
+      </div>
+      <div class="status-badge">LIVE</div>
+    </div>
+
+    <!-- LIVE PRICE TICKER -->
+    <div class="price-ticker" id="priceTickerContainer">
+      <!-- Price data will be inserted here -->
+    </div>
+
+    <div class="welcome-section">
+      <h2 class="welcome-title">Welcome, <span id="usernameDisplay">Trader</span></h2>
+      <p class="welcome-subtitle">Your RAV Trader panel is ready</p>
+    </div>
+
+    <div class="tabs">
+      <button class="tab active" data-tab="signals">Signals</button>
+      <button class="tab" data-tab="positions">Positions</button>
+      <button class="tab" data-tab="news">News</button>
+      <button class="tab" data-tab="settings">Settings</button>
+    </div>
+
+    <!-- SIGNALS TAB -->
+    <div id="signalsTab" class="tab-content active">
+      <!-- Coin Selection Section -->
+      <div class="coin-selection-container">
+        <div class="coin-selection-options">
+          <label class="coin-option cashback-option">
+            <input type="radio" name="coinType" value="cashback" checked>
+            <span class="coin-option-content">
+              <span class="coin-option-text">20% Cashback Coins</span>
+              <button class="info-btn" id="cashbackInfoBtn" type="button">
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                  <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M8 11V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  <circle cx="8" cy="5.5" r="0.5" fill="currentColor"/>
+                </svg>
+              </button>
+            </span>
+          </label>
+          <label class="coin-option all-coins-option">
+            <input type="radio" name="coinType" value="all">
+            <span class="coin-option-content">
+              <span class="coin-option-text">All Coins</span>
+            </span>
+          </label>
+        </div>
+      </div>
+
+      <div id="emptyState" class="empty-state">
+        <div class="empty-state-content">
+          <div class="pulse-loader">
+            <div class="pulse-ring"></div>
+            <div class="pulse-ring"></div>
+            <div class="pulse-ring"></div>
+          </div>
+          <h3 class="empty-state-title">No active signals yet</h3>
+          <p class="empty-state-description">Market is being scanned automatically every 2 minutes</p>
+          <p class="empty-state-info">Real-time signals based on RSI analysis (LONG below 40, SHORT above 60)</p>
+          <button class="btn btn-primary" id="startListeningBtn">Scan Now</button>
+        </div>
+      </div>
+
+      <div id="signalsContainer" class="signals-grid" style="display: none;">
+        <!-- Signals will be inserted here -->
+      </div>
+    </div>
+
+    <!-- POSITIONS TAB -->
+    <div id="positionsTab" class="tab-content">
+      <div class="positions-disclaimer">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="flex-shrink: 0;">
+          <path d="M8 14.5C4.41 14.5 1.5 11.59 1.5 8C1.5 4.41 4.41 1.5 8 1.5C11.59 1.5 14.5 4.41 14.5 8C14.5 11.59 11.59 14.5 8 14.5Z" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M8 5.5V8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <circle cx="8" cy="10.5" r="0.5" fill="currentColor"/>
+        </svg>
+        <span>ROI calculation excludes fees and trading costs</span>
+      </div>
+
+      <div class="positions-section">
+        <h3>Active Positions</h3>
+        <p class="tab-subtitle">Track your open positions in real-time</p>
+        <div id="activePositionsContainer" class="positions-grid">
+          <!-- Active positions will be inserted here -->
+        </div>
+        <div id="emptyPositionsState" class="empty-placeholder">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <line x1="12" y1="1" x2="12" y2="23"></line>
+            <polyline points="17 8 12 3 7 8"></polyline>
+            <polyline points="7 16 12 21 17 16"></polyline>
+          </svg>
+          <p>No active positions</p>
+          <span style="font-size: 12px; color: var(--text-muted);">Approve a signal to start tracking</span>
+        </div>
+      </div>
+
+      <div class="position-history-section" style="margin-top: 40px;">
+        <h3>Position History</h3>
+        <p class="tab-subtitle">Review your closed positions</p>
+        <div class="history-filters" style="margin-top: 16px; margin-bottom: 16px;">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="tp_hit">TP Hit</button>
+          <button class="filter-btn" data-filter="sl_hit">SL Hit</button>
+          <button class="filter-btn" data-filter="closed">Manual Close</button>
+        </div>
+        <div id="positionHistoryContainer" class="positions-grid">
+          <!-- Position history will be inserted here -->
+        </div>
+        <div id="emptyHistoryState" class="empty-placeholder">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+          <p>No position history yet</p>
+        </div>
+      </div>
+
+      <div class="achievements-section" style="margin-top: 40px;">
+        <h3>Achievements</h3>
+        <p class="tab-subtitle">Unlock badges and reach new milestones</p>
+        <div class="achievements-grid" id="achievementsContainer">
+          <!-- Achievements will be inserted here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- NEWS TAB -->
+    <div id="newsTab" class="tab-content">
+      <div class="news-section">
+        <h3>Crypto News</h3>
+        <p class="tab-subtitle">Stay updated with the latest cryptocurrency market news</p>
+        <div class="news-grid" id="newsContainer">
+          <div class="news-card">
+            <div class="news-badge">Market Update</div>
+            <h4 class="news-title">Bitcoin Reaches New Milestone</h4>
+            <p class="news-description">Bitcoin continues its strong performance with increased institutional adoption and market confidence.</p>
+            <div class="news-footer">
+              <span class="news-time">2 hours ago</span>
+            </div>
+          </div>
+          <div class="news-card">
+            <div class="news-badge">Analysis</div>
+            <h4 class="news-title">Ethereum Network Upgrade Success</h4>
+            <p class="news-description">Latest Ethereum upgrade shows significant improvements in transaction speeds and gas fees.</p>
+            <div class="news-footer">
+              <span class="news-time">5 hours ago</span>
+            </div>
+          </div>
+          <div class="news-card">
+            <div class="news-badge">DeFi</div>
+            <h4 class="news-title">DeFi Protocols See Record Growth</h4>
+            <p class="news-description">Decentralized finance platforms report unprecedented user growth and total value locked.</p>
+            <div class="news-footer">
+              <span class="news-time">8 hours ago</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SETTINGS TAB -->
+    <div id="settingsTab" class="tab-content">
+      <div class="settings-container">
+        <h3 style="font-size: 18px; margin-bottom: 8px;">Trading Mode</h3>
+        <p class="tab-subtitle">Choose how you want to execute trades</p>
+
+        <div class="trading-mode-container">
+          <div class="trading-mode-toggle">
+            <button class="mode-option active" data-mode="manual">
+              <div class="mode-icon">👤</div>
+              <div class="mode-info">
+                <div class="mode-label">Manual</div>
+                <div class="mode-description">Track positions manually</div>
+              </div>
+            </button>
+            <button class="mode-option" data-mode="auto">
+              <div class="mode-icon">🤖</div>
+              <div class="mode-info">
+                <div class="mode-label">Auto</div>
+                <div class="mode-description">Execute trades automatically</div>
+              </div>
+            </button>
+            <div class="mode-indicator"></div>
+          </div>
+          <div class="mode-note">
+            <span id="modeNoteText">Manual mode allows you to track positions without API credentials</span>
+          </div>
+        </div>
+
+        <div id="apiConfigSection">
+          <h3 style="margin-top: 32px; font-size: 18px;">API Configuration</h3>
+          <p class="tab-subtitle">Connect your Darkex API for automated trading</p>
+
+          <div class="form-group" style="margin-top: 16px;">
+            <label for="apiKey">API Key</label>
+            <input type="text" id="apiKey" class="select-input" placeholder="Enter your Darkex API key">
+            <span style="font-size: 11px; color: var(--text-muted); margin-top: 4px;">Required for automated trading</span>
+          </div>
+
+          <div class="form-group" style="margin-top: 16px;">
+            <label for="secretKey">Secret Key</label>
+            <input type="password" id="secretKey" class="select-input" placeholder="Enter your secret key">
+            <span style="font-size: 11px; color: var(--text-muted); margin-top: 4px;">Your credentials are stored locally and encrypted</span>
+          </div>
+        </div>
+
+        <h3 style="margin-top: 32px; font-size: 18px;">Trading Settings</h3>
+        <p class="tab-subtitle">Configure your trading preferences</p>
+
+        <div class="settings-group">
+          <div class="setting-item">
+            <div class="setting-info">
+              <div class="setting-label">Enable Take Profit</div>
+              <div class="setting-description">Automatically close positions at target profit</div>
+            </div>
+            <div class="toggle active" data-setting="takeProfit">
+              <div class="toggle-slider"></div>
+            </div>
+          </div>
+
+          <div class="setting-item">
+            <div class="setting-info">
+              <div class="setting-label">Enable Stop Loss</div>
+              <div class="setting-description">Protect your capital with automatic stop loss</div>
+            </div>
+            <div class="toggle active" data-setting="stopLoss">
+              <div class="toggle-slider"></div>
+            </div>
+          </div>
+
+          <div class="setting-item">
+            <div class="setting-info">
+              <div class="setting-label">Auto-confirm Trades</div>
+              <div class="setting-description">Execute signals without manual approval</div>
+            </div>
+            <div class="toggle" data-setting="autoConfirm">
+              <div class="toggle-slider"></div>
+            </div>
+          </div>
+
+          <div class="setting-item">
+            <div class="setting-info">
+              <div class="setting-label">Notification Sound</div>
+              <div class="setting-description">Play sound when new signals arrive</div>
+            </div>
+            <div class="toggle active" data-setting="notificationSound">
+              <div class="toggle-slider"></div>
+            </div>
+          </div>
+        </div>
+
+        <h3 style="margin-top: 32px; font-size: 18px;">Risk Management</h3>
+        <p class="tab-subtitle">Protect your capital with automatic limits</p>
+
+        <div class="form-group" style="margin-top: 16px;">
+          <label for="leverageInput">Leverage</label>
+          <input type="number" id="leverageInput" class="select-input" placeholder="Enter leverage" min="1" max="125" value="25">
+          <div class="leverage-quick-select">
+            <button class="leverage-btn" data-leverage="10">10x</button>
+            <button class="leverage-btn active" data-leverage="25">25x</button>
+            <button class="leverage-btn" data-leverage="50">50x</button>
+            <button class="leverage-btn" data-leverage="100">100x</button>
+          </div>
+        </div>
+
+        <div class="form-group" style="margin-top: 16px;">
+          <label for="positionSize">Position Size (% of balance)</label>
+          <input type="number" id="positionSize" class="select-input" placeholder="e.g., 2" min="0.1" max="100" step="0.1" value="2">
+          <div class="position-size-quick-select">
+            <button class="position-size-btn" data-position-size="10">10%</button>
+            <button class="position-size-btn" data-position-size="25">25%</button>
+            <button class="position-size-btn" data-position-size="50">50%</button>
+            <button class="position-size-btn" data-position-size="100">100%</button>
+          </div>
+          <span style="font-size: 11px; color: var(--text-muted); margin-top: 4px;">Percentage of your balance to use per trade</span>
+        </div>
+
+        <button class="btn btn-primary" id="saveSettingsBtn" style="margin-top: 24px;">Save Settings</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB WARNING OVERLAY -->
+  <div id="tabWarningOverlay" class="overlay">
+    <div class="overlay-content">
+      <div class="overlay-icon">⚠</div>
+      <h2 class="overlay-title">PAUSED</h2>
+      <p class="overlay-message">Wrong Tab Detected</p>
+      <p class="overlay-subtitle">Please return to the Darkex trading dashboard</p>
+    </div>
+  </div>
+
+  <!-- WELCOME OVERLAY -->
+  <div id="onboardingOverlay" class="onboarding-overlay">
+    <div class="onboarding-content">
+      <div class="onboarding-step active" data-step="1">
+        <div class="onboarding-icon">👋</div>
+        <h2 class="onboarding-title">Welcome to RAV Trader!</h2>
+        <p class="onboarding-text">Your AI-powered trading assistant for Darkex. Let's get you started!</p>
+        <div class="onboarding-actions">
+          <button class="btn btn-primary" onclick="dismissWelcome()">Get Started</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TERMS AND CONDITIONS MODAL -->
+  <div id="termsModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Terms and Conditions</h2>
+        <button class="modal-close" id="closeTermsModal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="terms-content">
+          <h3>1. Acceptance of Terms</h3>
+          <p>By accessing and using RAV Trader Chrome Extension (the "Service"), you accept and agree to be bound by the terms and provisions of this agreement. If you do not agree to these Terms and Conditions, please do not use the Service.</p>
+
+          <h3>2. Description of Service</h3>
+          <p>RAV Trader provides AI-powered cryptocurrency trading signals and analysis tools. The Service integrates with Darkex exchange to provide real-time market data and trading recommendations based on technical analysis indicators including RSI, price changes, and volatility metrics.</p>
+
+          <h3>3. User Accounts and Registration</h3>
+          <p>To use the Service, you must:</p>
+          <ul>
+            <li>Provide accurate, current, and complete information during registration</li>
+            <li>Maintain the security of your account credentials</li>
+            <li>Have a valid Darkex UID and trading account</li>
+            <li>Be at least 18 years of age or the age of majority in your jurisdiction</li>
+            <li>Comply with all applicable laws and regulations regarding cryptocurrency trading</li>
+          </ul>
+
+          <h3>4. Trading Risks and Disclaimers</h3>
+          <p><strong>IMPORTANT: Trading cryptocurrencies involves substantial risk of loss.</strong></p>
+          <ul>
+            <li>All trading signals provided are for informational purposes only and do not constitute financial advice</li>
+            <li>Past performance does not guarantee future results</li>
+            <li>You should never trade with money you cannot afford to lose</li>
+            <li>Cryptocurrency markets are highly volatile and unpredictable</li>
+            <li>RAV Trader is not responsible for any trading losses you may incur</li>
+            <li>You are solely responsible for your trading decisions and their outcomes</li>
+          </ul>
+
+          <h3>5. API Integration and Data Security</h3>
+          <p>When connecting your Darkex API credentials:</p>
+          <ul>
+            <li>Your API keys are stored locally in your browser and encrypted</li>
+            <li>We never share your API keys with third parties</li>
+            <li>You should use API keys with appropriate permissions (read and trade only)</li>
+            <li>You are responsible for maintaining the confidentiality of your API credentials</li>
+            <li>We are not liable for unauthorized access resulting from your failure to secure your credentials</li>
+          </ul>
+
+          <h3>6. Automated Trading</h3>
+          <p>If you enable automated trading features:</p>
+          <ul>
+            <li>You acknowledge that trades will be executed without manual confirmation</li>
+            <li>You are responsible for monitoring your automated trading settings</li>
+            <li>You should set appropriate risk management parameters including stop-loss and position sizing</li>
+            <li>You can disable automated trading at any time through the Settings page</li>
+          </ul>
+
+          <h3>7. Limitation of Liability</h3>
+          <p>RAV Trader and its developers shall not be liable for:</p>
+          <ul>
+            <li>Any direct, indirect, incidental, special, or consequential damages</li>
+            <li>Loss of profits, revenue, data, or use resulting from your use of the Service</li>
+            <li>Trading losses incurred based on signals or recommendations provided</li>
+            <li>Service interruptions, technical errors, or system failures</li>
+            <li>Actions taken by third-party exchanges or service providers</li>
+          </ul>
+
+          <h3>8. Privacy Policy</h3>
+          <p>We collect and process the following data:</p>
+          <ul>
+            <li>Account information: username, email, Darkex UID</li>
+            <li>Trading preferences and settings</li>
+            <li>Signal history and trading activity (stored locally)</li>
+            <li>We do not sell or share your personal information with third parties</li>
+            <li>We use industry-standard security measures to protect your data</li>
+          </ul>
+
+          <h3>9. Intellectual Property</h3>
+          <p>All content, features, and functionality of RAV Trader are owned by the developers and are protected by international copyright, trademark, and other intellectual property laws.</p>
+
+          <h3>10. Modifications to Service and Terms</h3>
+          <p>We reserve the right to:</p>
+          <ul>
+            <li>Modify or discontinue the Service at any time without notice</li>
+            <li>Update these Terms and Conditions at our discretion</li>
+            <li>Refuse service to anyone for any reason</li>
+          </ul>
+
+          <h3>11. Third-Party Services</h3>
+          <p>RAV Trader integrates with third-party services including:</p>
+          <ul>
+            <li>Darkex Exchange: Subject to their own terms of service</li>
+            <li>Binance API: For market data retrieval</li>
+            <li>We are not responsible for the actions, policies, or content of these third parties</li>
+          </ul>
+
+          <h3>12. Prohibited Activities</h3>
+          <p>You agree not to:</p>
+          <ul>
+            <li>Use the Service for any illegal or unauthorized purpose</li>
+            <li>Attempt to gain unauthorized access to our systems</li>
+            <li>Interfere with or disrupt the Service or servers</li>
+            <li>Reverse engineer or attempt to extract source code</li>
+            <li>Manipulate or abuse the signal generation system</li>
+          </ul>
+
+          <h3>13. Termination</h3>
+          <p>We may terminate or suspend your access immediately, without prior notice, for any breach of these Terms and Conditions.</p>
+
+          <h3>14. Governing Law</h3>
+          <p>These Terms shall be governed by and construed in accordance with applicable international laws, without regard to conflict of law provisions.</p>
+
+          <h3>15. Contact Information</h3>
+          <p>For questions about these Terms and Conditions, please contact the RAV Trader development team through official support channels.</p>
+
+          <h3>16. Acknowledgment</h3>
+          <p>By clicking "I accept" or using the Service, you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions.</p>
+
+          <p class="terms-footer"><strong>Last Updated:</strong> October 15, 2025</p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" id="acceptTermsBtn">I Accept</button>
+        <button class="btn btn-secondary" id="declineTermsBtn">Decline</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- POSITION ENTRY MODAL -->
+  <div id="positionEntryModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Confirm Position Entry</h2>
+        <button class="modal-close" id="closePositionModalBtn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p style="color: var(--text-secondary); margin-bottom: 20px;">Have you entered this position on Darkex? Fill in the details below to start tracking.</p>
+
+        <div class="position-entry-form">
+          <div class="form-group">
+            <label for="positionEntryPrice">Entry Price</label>
+            <input type="number" id="positionEntryPrice" class="select-input" step="0.00000001" required>
+          </div>
+
+          <div class="form-group" style="margin-top: 16px;">
+            <label for="positionTakeProfit">Take Profit</label>
+            <input type="number" id="positionTakeProfit" class="select-input" step="0.00000001" required>
+          </div>
+
+          <div class="form-group" style="margin-top: 16px;">
+            <label for="positionStopLoss">Stop Loss</label>
+            <input type="number" id="positionStopLoss" class="select-input" step="0.00000001" required>
+          </div>
+
+          <div class="form-group" style="margin-top: 16px;">
+            <label for="positionNotes">Notes (Optional)</label>
+            <textarea id="positionNotes" class="select-input" rows="3" placeholder="Add any notes about this position..."></textarea>
+          </div>
+
+          <div class="form-group" style="margin-top: 20px;">
+            <label class="checkbox-container">
+              <input type="checkbox" id="positionConfirmCheckbox" required>
+              <span class="checkmark"></span>
+              <span class="checkbox-label">I have entered this position on Darkex</span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" id="confirmPositionBtn">Confirm & Track Position</button>
+        <button class="btn btn-secondary" id="cancelPositionBtn">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CLOSE POSITION MODAL -->
+  <div id="closePositionModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Close Position</h2>
+        <button class="modal-close" id="closePositionModalClose">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div style="background: var(--bg-dark); border-radius: 8px; padding: 16px; margin-bottom: 20px;">
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <div style="font-size: 16px; font-weight: 600; color: var(--text-primary);" id="closePositionPair"></div>
+              <div id="closePositionType" class="position-type"></div>
+            </div>
+          </div>
+          <div style="font-size: 12px; color: var(--text-muted);">
+            Entry Price: <span id="closePositionEntry" style="color: var(--text-primary); font-weight: 500;"></span>
+          </div>
+        </div>
+
+        <p style="color: var(--text-secondary); margin-bottom: 20px;">Enter the closing details for this position</p>
+
+        <div class="position-close-form">
+          <div class="form-group">
+            <label for="closePositionPrice">Close Price</label>
+            <input type="number" id="closePositionPrice" class="select-input" step="0.00000001" required placeholder="Enter the price at which you closed">
+          </div>
+
+          <div class="form-group" style="margin-top: 16px;">
+            <label for="closePositionReason">Close Reason</label>
+            <select id="closePositionReason" class="select-input">
+              <option value="closed">Manual Close</option>
+              <option value="tp_hit">Take Profit Hit</option>
+              <option value="sl_hit">Stop Loss Hit</option>
+            </select>
+          </div>
+
+          <div class="form-group" style="margin-top: 16px;">
+            <label for="closePositionNotes">Closing Notes (Optional)</label>
+            <textarea id="closePositionNotes" class="select-input" rows="3" placeholder="Add any notes about closing this position..."></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" id="confirmClosePositionBtn">Close Position</button>
+        <button class="btn btn-secondary" id="cancelClosePositionBtn">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- DARKEX CAMPAIGNS MODAL -->
+  <div id="campaignsModal" class="modal">
+    <div class="modal-content campaigns-modal-content">
+      <div class="modal-header">
+        <h2>Darkex Campaigns</h2>
+        <button class="modal-close" id="closeCampaignsModal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p style="color: var(--text-secondary); margin-bottom: 24px; font-size: 14px;">
+          Take advantage of Darkex's exclusive campaigns for selected trading pairs
+        </p>
+
+        <!-- 20% Cashback Bonus Campaign -->
+        <div class="campaign-card">
+          <div class="campaign-header">
+            <div class="campaign-icon">💰</div>
+            <div>
+              <h3 class="campaign-title">20% Cashback Bonus</h3>
+              <p class="campaign-subtitle">Get 20% of your losses back</p>
+            </div>
+          </div>
+
+          <div class="campaign-body">
+            <p class="campaign-description">
+              If you open a trade on selected pairs and lose or get liquidated, you can claim <strong>20% of your loss</strong> as withdrawable USDT directly!
+            </p>
+
+            <div class="campaign-details">
+              <div class="campaign-detail-item">
+                <div class="campaign-detail-label">Eligibility</div>
+                <ul class="campaign-list">
+                  <li>Futures trading only</li>
+                  <li>Minimum 10x leverage</li>
+                  <li>Selected pairs: ADA, AVAX, BNB, BTC, DOGE, ETH, TRX, LINK, SOL, XRP</li>
+                </ul>
+              </div>
+
+              <div class="campaign-detail-item">
+                <div class="campaign-detail-label">How to Claim</div>
+                <ul class="campaign-list">
+                  <li>Close all open positions</li>
+                  <li>Submit request via Darkex live chat</li>
+                  <li>Bonus verified and credited instantly</li>
+                </ul>
+              </div>
+
+              <div class="campaign-highlight">
+                <strong>Example:</strong> Lose 500 USDT on BTC/USDT → Get 100 USDT back instantly
+              </div>
+            </div>
+
+            <a href="https://campaigns.darkex.com/en/20cashbackbonus/" target="_blank" class="campaign-link">
+              <span>View Full Campaign Details</span>
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- 5% Extra Earnings Campaign -->
+        <div class="campaign-card">
+          <div class="campaign-header">
+            <div class="campaign-icon">📈</div>
+            <div>
+              <h3 class="campaign-title">5% Extra Earnings Bonus</h3>
+              <p class="campaign-subtitle">Earn 5% extra on your profits</p>
+            </div>
+          </div>
+
+          <div class="campaign-body">
+            <p class="campaign-description">
+              When you open a trade on selected pairs and make profit, you can claim <strong>5% of your profit</strong> as extra withdrawable USDT bonus!
+            </p>
+
+            <div class="campaign-details">
+              <div class="campaign-detail-item">
+                <div class="campaign-detail-label">Eligibility</div>
+                <ul class="campaign-list">
+                  <li>Complete KYC verification</li>
+                  <li>Real trading activity with deposits</li>
+                  <li>Realized net profit only</li>
+                </ul>
+              </div>
+
+              <div class="campaign-detail-item">
+                <div class="campaign-detail-label">How to Claim</div>
+                <ul class="campaign-list">
+                  <li>Close all open positions</li>
+                  <li>Submit support ticket to claim</li>
+                  <li>Reward paid as fully withdrawable USDT</li>
+                </ul>
+              </div>
+
+              <div class="campaign-highlight">
+                <strong>Example:</strong> Profit 1000 USDT on ETH/USDT → Get 50 USDT extra bonus
+              </div>
+            </div>
+
+            <a href="https://campaigns.darkex.com/en/tradeandearn/" target="_blank" class="campaign-link">
+              <span>View Full Campaign Details</span>
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="campaign-footer-note">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M8 11V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <circle cx="8" cy="5.5" r="0.5" fill="currentColor"/>
+          </svg>
+          <span>Campaigns are subject to Darkex's terms and conditions. Visit the campaign pages for complete details.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="local-auth.js"></script>
+  <script src="utils.js"></script>
+  <script src="position-manager.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

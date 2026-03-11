@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "RAV Trader",
+  "version": "1.0.0",
+  "description": "Automated AI Trading Tool - Darkex Integration",
+  "icons": {
+    "128": "assets/logo-128.png"
+  },
+  "permissions": [
+    "storage",
+    "sidePanel",
+    "tabs",
+    "notifications",
+    "alarms"
+  ],
+  "host_permissions": [
+    "https://api.binance.com/*",
+    "https://www.darkex.com/*",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "action": {
+    "default_title": "RAV Trader",
+    "default_icon": "assets/logo-128.png"
+  },
+  "side_panel": {
+    "default_path": "index.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
